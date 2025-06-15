@@ -1,0 +1,19 @@
+name: "poscast Generator"
+author: "Ashan chinthana"
+description: "Generator a feed for a podcast from a YAML file"
+run:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "red"
+input:
+  email:
+    description: the commiter's email address
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: the committer's name
+    required: true
+    default: ${{ github.actor }}
+
